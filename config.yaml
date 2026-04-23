@@ -1,0 +1,19 @@
+# config.yaml
+app:
+  name: "Travel AI"
+  version: "0.1.0"
+  description: "Plan your travel with Travel AI"
+
+server:
+  host: "0.0.0.0"
+  port: 8200
+
+
+agents:
+  orchestrator_agent:
+    # model: "deepseek:deepseek-chat"
+    # model: "xai:grok-4-1-fast-reasoning"
+    # model: "gpt-5.4-mini"
+    model: "gpt-5.4-nano"
+  hotel_search_agent:
+    model: "gpt-5.4-nano"

@@ -42,6 +42,8 @@ def hotel_node(state: GraphContext) -> dict:
 
         for tool_call in response.tool_calls:
             result = tool_map[tool_call["name"]].invoke(tool_call["args"])
-            messages.append(ToolMessage(content=result.model_dump_json(), tool_call_id=tool_call["id"]))
+            messages.append(
+                ToolMessage(content=result.model_dump_json(), tool_call_id=tool_call["id"])
+            )
 
     return {"messages": [response]}
